@@ -1,0 +1,10 @@
+segment_id,segment_code,segment_name,description,rule_type,exclusive_group,priority,min_r,max_r,min_f,max_f,min_m,max_m,max_days_since_first_order,min_cases_180d,min_service_cost_ratio,min_return_rate,min_sale_orders,version,status,effective_from,effective_to
+SEG-2026-000001,PROSPECT,Prospect,Signed up but no completed purchase before the snapshot.,RFM,LIFECYCLE_VALUE,1,,,,0,,,,,,,,1,ACTIVE,2026-01-01,
+SEG-2026-000002,NEW_CUSTOMER,New customer,First purchase within the last 60 days.,RFM,LIFECYCLE_VALUE,2,,,1,,,,60,,,,,1,ACTIVE,2026-01-01,
+SEG-2026-000003,CHAMPIONS,Champions,"Bought recently, often and with high net spend (R>=4, F>=4, M>=4).",RFM,LIFECYCLE_VALUE,3,4,,4,,4,,,,,,,1,ACTIVE,2026-01-01,
+SEG-2026-000004,LOYAL,Loyal,"Recent and repeat buyers (R>=3, F>=3).",RFM,LIFECYCLE_VALUE,4,3,,3,,,,,,,,,1,ACTIVE,2026-01-01,
+SEG-2026-000005,POTENTIAL_LOYALIST,Potential loyalist,Recent buyers with few orders so far (R>=3).,RFM,LIFECYCLE_VALUE,5,3,,,,,,,,,,,1,ACTIVE,2026-01-01,
+SEG-2026-000006,AT_RISK,At risk,Last purchase 121-240 days ago (R=2).,RFM,LIFECYCLE_VALUE,6,2,2,,,,,,,,,,1,ACTIVE,2026-01-01,
+SEG-2026-000007,HIBERNATING,Hibernating,Last purchase more than 240 days ago (R=1).,RFM,LIFECYCLE_VALUE,7,1,1,,,,,,,,,,1,ACTIVE,2026-01-01,
+SEG-2026-000008,HIGH_SERVICE_COST,High service cost,At least 3 support cases in 180 days and service cost >= 10% of net spend.,OVERLAY,NONE,1,,,,,,,,3,0.1000,,,1,ACTIVE,2026-01-01,
+SEG-2026-000009,HIGH_RETURNS,High returns,At least 3 orders and returned value >= 30% of gross spend.,OVERLAY,NONE,2,,,,,,,,,,0.3000,3,1,ACTIVE,2026-01-01,
